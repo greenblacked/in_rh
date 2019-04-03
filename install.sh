@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-apt-get update 
-apt-get upgrade -y
-apt-get check-update
+yum check-update
 packages=(
     tree
     mc
@@ -10,6 +8,12 @@ packages=(
     unzip
     java-1.8.0-openjdk-devel.x86_64
     vim
-    nano
 )
-apt-get install -y "${packages[@]}"
+yum install -y "${packages[@]}"
+
+#export java variables
+cat << EOF > /etc/environment
+export JAVA_HOME='/usr/lib/jvm/jre-1.8.0-openjdk'
+export JRE_HOME='/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre'
+EOF
+source /etc/environment
