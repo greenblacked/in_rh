@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 yum check-update
 packages=(
+    nano
     tree
     mc
     git
