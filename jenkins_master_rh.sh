@@ -30,10 +30,10 @@ echo "Waiting 1 minutes before Jenkins up and running"
 sleep 1m
 
 # Download Jenkins CLI
-if [ ! -f "/home/vagrant/jenkins-cli.jar" ]
-then
-wget http://epm-jmaster1:8080/jnlpJars/jenkins-cli.jar
-fi
+#if [ ! -f "/home/vagrant/jenkins-cli.jar" ]
+#then
+#wget http://epm-jmaster1:8080/jnlpJars/jenkins-cli.jar
+#fi
 
 
 
